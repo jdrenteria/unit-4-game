@@ -2,31 +2,53 @@
 <html>
 
 <head>
-    <title>CrystalCOllector</title>
-    <link rel="stylesheet" type="text/css" href="assets/CSS/reset.css">
-    <link rel="stylesheet" type="text/css" href="assets/CSS/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    
+  <title>CrystalCOllector</title>
+  <link rel="stylesheet" type="text/css" href="assets/CSS/reset.css">
+  <link rel="stylesheet" type="text/css" href="assets/CSS/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+
   </body>
 </head>
 
 <body>
   <div class="box">
+    <div class="header">
+      <h1>Dragon Ball Collector!!!</h1>
+    </div>
+    <div class="instructions">
+      <p>
+        You will be given a random number at the start of the game.</p>
+      <p>
+        There are four dragon balls below. By clicking on a dragon ball you will add a specific amount of points to you
+        total score.
+      </p>
+      <p>
+        You win the game by matching your total score to the random number, you lose the game if your total score goes
+        above the random number.
+      </p>
+      <p>
+        The value of each dragon ball is hidden from you until you click on it.
+        Each time when the game start, the game will change the values of each dragon ball.
+
+      </p>
+    </div>
 
     <p id="result"> </p>
     <p id="previous"></p>
     <p id="win"></p>
     <p id="lost"></p>
-  
+
     <div class="crystals">
-      </div>
-    <script type = "text/javascript" src = "./assets/javascript/game.js"></script>
+    </div>
+    <script type="text/javascript" src="./assets/javascript/game.js"></script>
 
 
   </div>
-  
+
 </body>
 
 </html>
-

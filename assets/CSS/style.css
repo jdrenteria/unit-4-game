@@ -7,9 +7,13 @@
 }
 .crystals{
     display: flex;
-    justify-content: space-evenly;
+    
     align-content: center;
-    margin-top: 550px;
+    margin-top: -0px;
+    position: absolute;
+    justify-content: space-evenly;
+
+    
 }
 
 img{
@@ -18,25 +22,63 @@ img{
 .box{ 
     background-image: url(../images/Background.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    height: 850px;
+    background-size:cover;
     background-position: center;
-    background-position: fixed;
-
+    background-position: absolute;
+    background-attachment:fixed;
+    background-position: left top;
+    margin:0;
     
+    
+}
+
+.header{
+    background-color:darkorange;
+    color:white;
+    width: 300px;
+    margin-left: 20px;
+    text-align: center;
+}
+.instructions{
+    background-color: antiquewhite;
+    margin-left: 20px;
+    width: 450px;
+    text-align: center;
+    color: green;
+    font-size: 18px;
+    font: weight 100;
+
 }
 
 #result{
     text-align: left;
     color:white;
     font-size: 20px;
+    background-color:seagreen;
+    width: 150px;
+    margin-left: 20px;
+    text-align: center;
 
 }
 #lost{
     color: white;
+    background-color:lightseagreen;
+    width: 100px;
+    margin-left: 20px;
+    text-align: center;
 }
 #win{
     color: white;
+    background-color:lightseagreen;
+    width: 100px;
+    margin-left: 20px;
+    text-align: center;
 }
 #previous{
     color:white;
+    background-color: orangered;
+    width: 100px;
+    margin-left: 20px;
+    text-align: center;
 }

@@ -6,42 +6,50 @@ var previous = 0;
 
 
 var resetAndStart = function () {
-    //Emptys crystal
+    
     $(".crystals").empty();
 
     var images = [
-        '',
-        '',
-        '',
-        ''];
-    //Generates random number
+        'https://res.cloudinary.com/teepublic/image/private/s--bOyUg3iX--/t_Preview/b_rgb:191919,c_limit,f_jpg,h_630,q_90,w_630/v1481686409/production/designs/946201_1.jpg',
+        'https://res.cloudinary.com/teepublic/image/private/s--gNtQvx4_--/t_Preview/b_rgb:191919,c_limit,f_jpg,h_630,q_90,w_630/v1481686426/production/designs/946204_1.jpg',
+        'https://res.cloudinary.com/teepublic/image/private/s--M-X253Zf--/t_Preview/b_rgb:191919,c_limit,f_jpg,h_630,q_90,w_630/v1481688345/production/designs/946321_1.jpg',
+        'https://res.cloudinary.com/teepublic/image/private/s--VqlV2QTK--/t_Preview/b_rgb:191919,c_limit,f_jpg,h_630,q_90,w_630/v1481688483/production/designs/946350_1.jpg',
+        
+    ];
+    
     random_result = Math.floor(Math.random() * 69) + 30;
-    //Puts random number on the code 
-    $("#result").html('Random Result:' + random_result);
-    //Makes 4 crytals
+    
+    $("#result").html('Target Number:' + random_result);
+    
     for (var i = 0; i < 4; i++) {
-        //Ramdom number inside crystal
+      
         var random = Math.floor(Math.random() * 11) + 1;
-        //Div for random numbers w/ attribute 
+         
         var crystal = $("<div>");
         crystal.attr({
             "class": 'crystal',
             "data-random": random
+
         });
-        //Connects together crystal information 
+
+        crystal.css({
+            "background-image":"url('" + images[i] + "')",
+            "background-size":"cover"
+            
+        })
+      
         $(".crystals").append(crystal);
 
     }
     $("#previous").html("Score:" + previous);
 }
 
-//Starts and runs the data
+
 
 resetAndStart();
 
 
 
-//Click Functions and event delegation
 $(document).on('click', ".crystal", function () {
 
     var num = parseInt($(this).attr('data-random'));
@@ -49,23 +57,22 @@ $(document).on('click', ".crystal", function () {
     previous += num;
 
     $("#previous").html("Score:" + previous);
-    //losing rule 
+     
     if (previous > random_result) {
         lost++;
         $("#lost").html("You Lost:" + lost);
-        //resets numbers after losing to 0
+     
         previous = 0;
-        //resets
+    
         resetAndStart();
 
     }
-    //winning rule
     else if (previous === random_result) {
         win++;
         $("#win").html("You Win:" + win);
-        //resets numbers after winning to 0
+       
         previous = 0;
-        //resets
+ 
         resetAndStart();
 
     }

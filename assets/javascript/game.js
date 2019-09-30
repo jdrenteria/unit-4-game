@@ -61,6 +61,7 @@ $(document).on('click', ".crystal", function () {
     if (previous > random_result) {
         lost++;
         $("#lost").html("You Lost:" + lost);
+        alert("BETTER LUCK NEXT TIME!!")
      
         previous = 0;
     
@@ -70,7 +71,7 @@ $(document).on('click', ".crystal", function () {
     else if (previous === random_result) {
         win++;
         $("#win").html("You Win:" + win);
-       
+       alert("WINNER WINNER CHICKEN DINNER!!")
         previous = 0;
  
         resetAndStart();
